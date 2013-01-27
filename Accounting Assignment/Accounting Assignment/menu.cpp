@@ -1,20 +1,22 @@
 #include "menu.h"
 
+//default class constructor
 Menu::Menu()
 {
 	title = "Menu";
-	maxEntries = 8;
-	numEntries = 0;
-	choice = 0;
-	for(int i = 0; i<maxEntries;i++)
-	{
-		menuEntries[i] = " ";
-	}
+	initMenu();
 }
 
+//class constructor with custom title input
 Menu::Menu(string a)
 {
 	title = a;
+	initMenu();
+}
+
+//initializes non-unique portions of class
+void Menu::initMenu()
+{
 	maxEntries = 8;
 	numEntries = 0;
 	choice = 0;
@@ -24,6 +26,7 @@ Menu::Menu(string a)
 	}
 }
 
+//gets menu choice from user
 void Menu::addItem(string item)
 {
 	if(numEntries>=maxEntries)
@@ -42,17 +45,18 @@ void Menu::addItem(string item)
 	return;
 }
 
+//adds a menu item to the menu
 int Menu::getChoice()
 {
 	system("CLS");
-	cout<< "\t"<<title<<endl;
+	cout<< "\n\n\t\t"<<title<<endl;
 	for(int i = 0; i<numEntries;i++)
 	{
-		cout<<i+1<<": "<<menuEntries[i]<<endl;
+		cout<<"\t"<<i+1<<": "<<menuEntries[i]<<endl;
 	}
 	while(true)
 	{
-		cout<<"Please enter your choice: ";
+		cout<<"\n\tPlease enter your choice: ";
 		cin.clear();
 		cin.sync();
 		cin>>choice;

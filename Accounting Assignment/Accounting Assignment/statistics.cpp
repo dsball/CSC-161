@@ -1,35 +1,62 @@
 #include "statistics.h"
 
-ifstream  welcomeFile;
-
+//default class constructor
 Stats::Stats()
 {
 	numEntries = 0;
 	maxEntries = 20;
 }
 
-void Stats::fill()
+//populates an array of doubles from whitespace dilineated file
+//returns false if there was an error in data validation
+bool Stats::fill()
 {
-	string temp;
+	double temp;
+	bool more = true;
+	bool status = true;
 
 	statFile.open("lab1Numbers.txt");
-	for(int i = 0; i<maxEntries && statFile >> stats[i]; i++)
+	for(int i = 0; i<maxEntries; i++)
 	{
-		numEntries++;
+		if(statFile >> temp)
+		{
+			stats[i] = temp;
+			numEntries++;
+		}
+		else if(statFile.eof())
+		{
+			;
+		}
+		else
+		{
+			status = false;
+		}
+	}
+
+	statFile>>temp;
+	if(!statFile.eof())
+	{
+		status = false;
 	}
 	statFile.close();
+	return status;
 }
 
+//prints values from an array
 void Stats::print()
 {
 	cout<<endl;
 	for(int i = 0; i<numEntries ; i++)
 	{
-		cout<<stats[i]<<endl;
+		cout<<std::setw(10)<<stats[i];
+		if((i+1)%4 == 0)
+		{
+			cout<<endl;
+		}
 	}
 }
 
-
+//calculates and returns the smallest value in the array
 double Stats::smallNum()
 {
 	int smallest = 0;
@@ -44,7 +71,7 @@ double Stats::smallNum()
 	return 0;
 }
 
-
+//calculates and returns the largest value in the array
 double Stats::bigNum()
 {
 	int largest = 0;
@@ -59,7 +86,7 @@ double Stats::bigNum()
 	return 0;
 }
 
-
+//calculates and returns the sum of values in the array
 double Stats::sum()
 {
 	double sum = 0;
@@ -71,48 +98,9 @@ double Stats::sum()
 	return sum;
 }
 
+//calculates and returns the average of values in the array
 double Stats::average()
 {
 	return Stats::sum()/(numEntries);
-}
-
-void pause()
-{
-	cout<<"\n\nPress Enter to continue...";
-	cin.clear();
-	cin.sync();
-	cin.get();
-}
-
-void welcome()
-{
-	system("CLS");
-	welcomeFile.open("about.txt");
-	printFile(welcomeFile);
-	welcomeFile.close();
-	pause();
-}
-
-void printFile(ifstream &inFile)
-{
-	string printMe = "";
-	string temp;
-
-	if(inFile)
-	{
-		while(inFile.good())
-		{
-			getline(inFile, temp);
-			temp += "\n";
-			printMe += temp;
-		}
-	}
-	else
-	{
-		cout<<"No input detected!";
-	}
-
-	system("CLS");
-	cout<<printMe;
 }
 

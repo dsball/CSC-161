@@ -62,14 +62,17 @@
   <ItemGroup>
     <ClInclude Include="menu.h" />
     <ClInclude Include="statistics.h" />
+    <ClInclude Include="uimanip.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="statistics.cpp" />
     <ClCompile Include="driver.cpp" />
+    <ClCompile Include="uimanip.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="about.txt" />
+    <None Include="goodbye.txt" />
     <None Include="lab1Numbers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
