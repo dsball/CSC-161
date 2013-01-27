@@ -13,9 +13,12 @@ bool Stats::fill()
 {
 	double temp;
 	bool more = true;
-	bool status = true;
 
 	statFile.open("lab1Numbers.txt");
+	if(statFile.fail())
+	{
+		return false;
+	}
 	for(int i = 0; i<maxEntries; i++)
 	{
 		if(statFile >> temp)
@@ -29,17 +32,17 @@ bool Stats::fill()
 		}
 		else
 		{
-			status = false;
+			return false;
 		}
 	}
 
 	statFile>>temp;
 	if(!statFile.eof())
 	{
-		status = false;
+		return false;
 	}
 	statFile.close();
-	return status;
+	return true;
 }
 
 //prints values from an array

@@ -9,7 +9,6 @@ Build a driver program which will load a file and allow the user to display the 
 #include "menu.h"
 #include "statistics.h"
 #include "uimanip.h"
-#include <Windows.h>
 
 int main()
 {
@@ -18,7 +17,10 @@ int main()
 	int myChoice=0;
 	bool error;
 
-	printFile("about.txt");
+	if(!printFile("about.txt"))
+	{
+		cout<<"ERROR READING WELCOME FILE\n";
+	}
 	pause();
 	statMenu.addItem("Print Array");
 	statMenu.addItem("Array Sum");
@@ -32,7 +34,7 @@ int main()
 	{
 		system("CLS");
 		cout<<"ERROR: There has been an error reading the input file.\n";
-		cout<<"Please verify the input file is properly\nformatted and that there are no more than 20 entries and try again.";
+		cout<<"Please verify the input file exists, is properly\nformatted and that there are no more than 20 entries and try again.\n";
 		pause();
 	}
 	else
@@ -60,7 +62,10 @@ int main()
 				cout<<"\n\n\tMin value is: "<<currentStats.smallNum();
 				break;
 			case 6:
-				printFile("goodbye.txt");
+				if(!printFile("goodbye.txt"))
+				{
+					cout<<"ERROR READING EXIT FILE\n";
+				}
 				break;
 			default:
 				cout<<"ERROR: INVALID MENU CHOICE.";

@@ -49,7 +49,7 @@ void Menu::addItem(string item)
 int Menu::getChoice()
 {
 	system("CLS");
-	cout<< "\n\n\t\t"<<title<<endl;
+	cout<< "\n\n\t\t"<<title<<endl<<endl;
 	for(int i = 0; i<numEntries;i++)
 	{
 		cout<<"\t"<<i+1<<": "<<menuEntries[i]<<endl;

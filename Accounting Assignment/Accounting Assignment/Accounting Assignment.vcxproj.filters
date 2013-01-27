@@ -40,13 +40,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lab1Numbers.txt">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="about.txt">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="goodbye.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="lab1Numbers.txt">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

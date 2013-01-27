@@ -34,7 +34,7 @@ using std::ifstream;
 using std::string;
 
 void pause();
-void printFile(string);
+bool printFile(string);
 string fileToString(ifstream&);
 
 #endif

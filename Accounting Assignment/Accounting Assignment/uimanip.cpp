@@ -12,13 +12,18 @@ void pause()
 }
 
 //opens a file and prints it with fileToString()
-void printFile(string inFile)
+bool printFile(string inFile)
 {
 	ifstream splashFile;
 	system("CLS");
 	splashFile.open(inFile);
+	if(splashFile.fail())
+	{
+		return false;
+	}
 	cout << fileToString(splashFile);
 	splashFile.close();
+	return true;
 }
 
 //stores an ifstream in a string and returns it
