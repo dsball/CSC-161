@@ -44,6 +44,7 @@ void Menu::addItem(string item)
 	}
 	return;
 }
+//displays menu items
 
 //adds a menu item to the menu
 int Menu::getChoice()
@@ -60,7 +61,7 @@ int Menu::getChoice()
 		cin.clear();
 		cin.sync();
 		cin>>choice;
-		if(cin.fail() || (choice<=0 || choice>6) )
+		if(cin.fail() || (choice<=0 || choice>7) )
 		{
 			cout<<"Invalid choice. ";
 			continue;

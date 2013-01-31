@@ -22,25 +22,21 @@ Menu(string)      N/A        class constructor with custom title input
 initMenu()        void       initializes non-unique portions of class
 	no params
 
-getChoice()       int        gets menu choice from user
+getChoice()       int        prints menu and gets menu choice from user
 	no params
 
 addItem(string)   void       adds a menu item to the menu
 	string: menu item name
+
 */
 
 
 #ifndef _MENU_INTERFACE_
 #define _MENU_INTERFACE_
 
+#include "utility.h"
 #include<string>
 #include<iostream>
-
-using std::cout;
-using std::cin;
-using std::endl;
-using std::ifstream;
-using std::string;
 
 class Menu
 {
@@ -56,6 +52,7 @@ public:
 	void initMenu();
 	int getChoice();
 	void addItem(string);
+	void print();
 };
 
 #endif

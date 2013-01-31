@@ -1,5 +1,5 @@
 /*------------------------------------class.h
-Purpose: provides functions
+Purpose: provides general utility functions
 
 --- Member Data ---
 Name            Type           Description

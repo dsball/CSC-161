@@ -1,0 +1,25 @@
+﻿Build started 1/31/2013 1:10:26 PM.
+     1>Project "C:\Users\daniel\Documents\GitHub\CSC-161\bag\bag\bag.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\bag.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt driver.cpp
+         driver.cpp
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(19): error C2143: syntax error : missing ';' before '<'
+                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(20) : see reference to class template instantiation 'Bag<TYPE>' being compiled
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(19): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C2143: syntax error : missing ';' before '<'
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C2988: unrecognizable template declaration/definition
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C2059: syntax error : '<'
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C2065: 'TYPE' : undeclared identifier
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(72): error C2039: 'toVector' : is not a member of 'Bag'
+                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(6) : see declaration of 'Bag'
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(6): error C2143: syntax error : missing ';' before '{'
+     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(6): error C2447: '{' : missing function header (old-style formal list?)
+     1>Done Building Project "C:\Users\daniel\Documents\GitHub\CSC-161\bag\bag\bag.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.36
