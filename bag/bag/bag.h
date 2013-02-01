@@ -1,5 +1,4 @@
 #include "utility.h"
-#include <vector>
 
 template<class TYPE> 
 class Bag
@@ -13,10 +12,9 @@ public:
 	bool addItem(const TYPE& newEntry);
 	int getCount() const;
 	bool findItem() const;
-	void list() const;
-	bool deleteItem();
+	bool deleteItem(int itemNum);
 	bool empty();
-	vector<TYPE> toVector();
+	vector<TYPE> toVector() const;
 };
 
 template<class TYPE>
@@ -38,14 +36,18 @@ bool Bag<TYPE>::addItem(const TYPE& newEntry)
 }
 
 template<class TYPE>
-bool Bag<TYPE>::deleteItem()
+bool Bag<TYPE>::deleteItem(int itemNum)
 {
+	itemArray[itemNum] = itemArray[itemCount-1];
+	itemCount--;
 	return true;
 }
 
 template<class TYPE>
 bool Bag<TYPE>::empty()
 {
+	cout<<"Emptying ...";
+	itemCount = 0;
 	return true;
 }
 
@@ -58,18 +60,11 @@ bool Bag<TYPE>::findItem() const
 template<class TYPE>
 int Bag<TYPE>::getCount() const
 {
-	return count;
+	return itemCount;
 }
 
 template<class TYPE>
-void Bag<TYPE>::list() const
-{
-
-}
-
-
-template<class TYPE>
-vector<TYPE> Bag<TYPE>::toVector()
+vector<TYPE> Bag<TYPE>::toVector() const
 {
 	vector<TYPE> bagItems;
 

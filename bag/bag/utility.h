@@ -26,12 +26,16 @@ fileToString(ifstream &inFile)  void      stores an ifstream in a string and ret
 #include<iostream>
 #include<iomanip>
 #include<fstream>
+#include<vector>
+#include <windows.h>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::ifstream;
 using std::string;
+using std::vector;
+using std::setw;
 
 void pause();
 bool printFile(string);
