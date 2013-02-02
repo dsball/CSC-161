@@ -1,28 +1,66 @@
+/*------------------------------------bag.h
+Purpose: defines a template bag class which contains an array and functions for manipulating it.
+
+--- Member Data ---
+Name            Type              Description
+-------------------------------------------------------------------------------------------
+MAX_ITEMS	   static const int   Sets max array size
+itemArray[]    class TYPE         an array of size MAX_ITEMS
+itemCount      int                number of used indices in the array
+roomToAdd      bool               used to ensure array does not go out of bounds, return for addItem()      
+
+--- Functions ---
+Name                Return    Description; Parameter description
+--------------------------------------------------------------------------------------------
+Bag()			    none      Default constructor
+	no params
+
+getCount()			int       returns itemCount to client
+	no params
+
+addItem()           bool      if there is room, adds argument to array. Returns success/fail
+    TYPE& newEntry            address of item to be added to array
+
+findItem() const    int       checks through array to find index matching parameter value
+	TYPE itemToFind           value to be searched for
+
+deleteItem()        bool      deletes an item from array, moves last entry to empty place and reduces array size
+    int itemNum               index of item to be removed
+
+empty()				bool      sets itemCount to 0
+	no params
+
+toVector() const	vector<TYPE>   reads array into a vector and returns the vector
+	no params
+*/
+
 #include "utility.h"
 
 template<class TYPE> 
 class Bag
 {
 private:
-	static const int MAX_ITEMS = 10;
+	static const int MAX_ITEMS = 15;
 	TYPE itemArray[MAX_ITEMS];
 	int itemCount;
 public:
 	Bag();
 	bool addItem(const TYPE& newEntry);
 	int getCount() const;
-	bool findItem() const;
+	int findItem(TYPE itemToFind) const;
 	bool deleteItem(int itemNum);
 	bool empty();
 	vector<TYPE> toVector() const;
 };
 
+//Default constructor
 template<class TYPE>
 Bag<TYPE>::Bag()
 {
 	itemCount = 0;
 }
 
+//if there is room, adds argument to array. Returns success/fail
 template<class TYPE>
 bool Bag<TYPE>::addItem(const TYPE& newEntry)
 {
@@ -35,6 +73,7 @@ bool Bag<TYPE>::addItem(const TYPE& newEntry)
 	return roomToAdd;
 }
 
+//deletes an item from array, moves last entry to empty place and reduces array size
 template<class TYPE>
 bool Bag<TYPE>::deleteItem(int itemNum)
 {
@@ -51,18 +90,28 @@ bool Bag<TYPE>::empty()
 	return true;
 }
 
+//checks through array to find index matching parameter value
 template<class TYPE>
-bool Bag<TYPE>::findItem() const
+int Bag<TYPE>::findItem(TYPE itemToFind) const
 {
-	return true;
+	for(int i=0; i<itemCount;i++)
+	{
+		if(itemArray[i] == itemToFind)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
 
+//returns itemCount to client
 template<class TYPE>
 int Bag<TYPE>::getCount() const
 {
 	return itemCount;
 }
 
+//reads array into a vector and returns the vector
 template<class TYPE>
 vector<TYPE> Bag<TYPE>::toVector() const
 {

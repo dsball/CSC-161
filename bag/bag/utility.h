@@ -1,5 +1,5 @@
-/*------------------------------------class.h
-Purpose: provides general utility functions
+/*------------------------------------utility.h
+Purpose: provides general utility functions, headers, and generic using declarations.
 
 --- Member Data ---
 Name            Type           Description

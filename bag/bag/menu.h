@@ -1,4 +1,4 @@
-/*------------------------------------class.h
+/*------------------------------------menu.h
 Purpose: provides client functions to generate and utilize a custom menu
 
 --- Member Data ---
