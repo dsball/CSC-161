@@ -62,6 +62,7 @@
   <ItemGroup>
     <ClInclude Include="bag.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="trip.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>

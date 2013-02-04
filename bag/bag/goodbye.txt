@@ -5,4 +5,4 @@
   \____|\___/ \___/ \__,_|_.__/ \__, |\___|
                                 |___/     
 
-      Thank you for using Statistics!
+      Thank you for using Bag!

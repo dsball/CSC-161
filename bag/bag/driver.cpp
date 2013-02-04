@@ -28,6 +28,8 @@ int main()
 	vector<string> stringBagList;
 	int stringBagSize;
 
+
+
 	int deleteMe;
 	int index = 0;
 	int findInt;
