@@ -1,6 +1,7 @@
 #include "utility.h"
+#include "bag.h"
 
-struct guest
+struct client
 {
 	string firstName;
 	string lastName;
@@ -9,7 +10,22 @@ struct guest
 	int experience;
 };
 
-class trip
+class Trip
 {
+private:
+	Bag<client> clientBag;
+	vector<client> clientList;
+	int clientBagSize;
 
+	int deleteMe;
+	int index;
+	int findInt;
+	string findString;
+public:
+	Trip();
+	bool addClient();
+	bool remClient();
+	bool cancelTrip();
+	int countClients();
+	void listClients();
 };

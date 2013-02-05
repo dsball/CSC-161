@@ -10,11 +10,13 @@ The driver will consist of a menu and submenus which allow the user to perform b
 #include "menu.h"
 #include "utility.h"
 #include "bag.h"
+#include "trip.h"
 
 int main()
 {
 	Menu menuA;
 	Menu menuB;
+	Menu menuC;
 	int choice = 0;
 	int intToAdd;
 	string stringToAdd;
@@ -27,8 +29,6 @@ int main()
 	Bag<string> StringBag;
 	vector<string> stringBagList;
 	int stringBagSize;
-
-
 
 	int deleteMe;
 	int index = 0;
@@ -54,7 +54,14 @@ int main()
 	menuB.addItem("List items in the bag");
 	menuB.addItem("Exit");
 
-	while(choice != 3)
+	menuC.addItem("Add client to trip");
+	menuC.addItem("Remove client from trip");
+	menuC.addItem("Cancel trip");
+	menuC.addItem("Number of clients in trip");
+	menuC.addItem("List clients in trip");
+	menuC.addItem("Exit");
+
+	while(choice != 4)
 	{
 		choice = menuA.getChoice();
 		switch(choice)
@@ -249,6 +256,30 @@ int main()
 				}
 				break;
 			case 3:
+				while(choice != 6)
+				{
+					choice = menuB.getChoice();
+					switch(choice)
+					{
+						case 1:
+							
+						case 2:
+							
+						case 3:
+							
+						case 4:
+							
+						case 5:
+							
+						case 6:
+							cout<<"\n\t\tReturning to main menu.\n";
+							break;
+						default:
+							cout<<"ERROR: undefined entry.";
+							break;
+					}
+				}
+			case 4:
 				if(!printFile("goodbye.txt"))
 				{
 					cout<<"ERROR READING EXIT FILE\n";

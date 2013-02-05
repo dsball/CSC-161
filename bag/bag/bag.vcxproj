@@ -68,6 +68,7 @@
   <ItemGroup>
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="trip.cpp" />
     <ClCompile Include="utiliity.cpp" />
   </ItemGroup>
   <ItemGroup>
