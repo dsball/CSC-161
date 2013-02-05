@@ -16,6 +16,7 @@ private:
 	Bag<client> clientBag;
 	vector<client> clientList;
 	int clientBagSize;
+	client tempClient;
 
 	int deleteMe;
 	int index;

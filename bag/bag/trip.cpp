@@ -15,12 +15,16 @@ Trip::Trip()
 bool Trip::addClient()
 {
 	cout<<"\n\tEnter the first name followed by the last name: ";
-
-	cout<<"\n\tEnter the phone number";
-
+	cin>>tempClient.firstName;
+	cin>>tempClient.lastName;
 	cout<<"\n\tEnter Age:";
-
+	cin>>tempClient.age;
+	cout<<"\n\tEnter the phone number";
+	cin>>tempClient.phone;
 	cout<<"\n\tEnter experience (0 - none, 1 - intermediate, 2 - expert):";
+	cin>>tempClient.experience;
+
+	return(clientBag.addItem(tempClient));
 }
 
 bool Trip::remClient()
