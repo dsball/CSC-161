@@ -34,6 +34,9 @@ toVector() const	vector<TYPE>   reads array into a vector and returns the vector
 	no params
 */
 
+#ifndef _BAG_INTERFACE_
+#define _BAG_INTERFACE_
+
 #include "utility.h"
 
 template<class TYPE> 
@@ -115,11 +118,13 @@ int Bag<TYPE>::getCount() const
 template<class TYPE>
 vector<TYPE> Bag<TYPE>::toVector() const
 {
+	
 	vector<TYPE> bagItems;
-
 	for(int i=0; i<itemCount; i++)
 	{
 		bagItems.push_back(itemArray[i]);
 	}
 	return bagItems;
 }
+
+#endif

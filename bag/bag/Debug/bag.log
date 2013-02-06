@@ -1,107 +1,26 @@
-﻿Build started 2/5/2013 1:22:07 PM.
+﻿Build started 2/6/2013 9:23:16 AM.
      1>Project "C:\Users\daniel\Documents\GitHub\CSC-161\bag\bag\bag.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\bag.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\bag.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt driver.cpp menu.cpp trip.cpp utiliity.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt driver.cpp trip.cpp
          trip.cpp
-         menu.cpp
          driver.cpp
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(54): error C2953: 'Bag' : class template has already been defined
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(41) : see declaration of 'Bag'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(61): error C2244: 'Bag<TYPE>::Bag' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(47) : see declaration of 'Bag<TYPE>::Bag'
-                 definition
-                 'Bag::Bag(void)'
-                 existing declarations
-                 'Bag<TYPE>::Bag(void)'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(74): error C2244: 'Bag<TYPE>::addItem' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(48) : see declaration of 'Bag<TYPE>::addItem'
-                 definition
-                 'bool Bag::addItem(const TYPE &)'
-                 existing declarations
-                 'bool Bag<TYPE>::addItem(const TYPE &)'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(83): error C2244: 'Bag<TYPE>::deleteItem' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(51) : see declaration of 'Bag<TYPE>::deleteItem'
-                 definition
-                 'bool Bag::deleteItem(int)'
-                 existing declarations
-                 'bool Bag<TYPE>::deleteItem(int)'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(91): error C2244: 'Bag<TYPE>::empty' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(52) : see declaration of 'Bag<TYPE>::empty'
-                 definition
-                 'bool Bag::empty(void)'
-                 existing declarations
-                 'bool Bag<TYPE>::empty(void)'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(105): error C2244: 'Bag<TYPE>::findItem' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(50) : see declaration of 'Bag<TYPE>::findItem'
-                 definition
-                 'int Bag::findItem(TYPE) const'
-                 existing declarations
-                 'int Bag<TYPE>::findItem(TYPE) const'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(112): error C2244: 'Bag<TYPE>::getCount' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(49) : see declaration of 'Bag<TYPE>::getCount'
-                 definition
-                 'int Bag::getCount(void) const'
-                 existing declarations
-                 'int Bag<TYPE>::getCount(void) const'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(125): error C2244: 'Bag<TYPE>::toVector' : unable to match function definition to an existing declaration
-                 c:\users\daniel\documents\github\csc-161\bag\bag\bag.h(53) : see declaration of 'Bag<TYPE>::toVector'
-                 definition
-                 'std::vector<TYPE> Bag::toVector(void) const'
-                 existing declarations
-                 'std::vector<TYPE> Bag<TYPE>::toVector(void) const'
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(25): error C2133: 'IntBag' : unknown size
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(25): error C2512: 'Bag' : no appropriate default constructor available
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(29): error C2133: 'StringBag' : unknown size
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(29): error C2512: 'Bag' : no appropriate default constructor available
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(84): error C2662: 'Bag<TYPE>::addItem' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(99): error C2662: 'Bag<TYPE>::deleteItem' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(104): error C2662: 'Bag<TYPE>::empty' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(116): error C2662: 'Bag<TYPE>::getCount' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(123): error C2662: 'Bag<TYPE>::findItem' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(135): error C2662: 'Bag<TYPE>::toVector' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(147): warning C4129: '|' : unrecognized character escape sequence
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(178): error C2662: 'Bag<TYPE>::addItem' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(193): error C2662: 'Bag<TYPE>::deleteItem' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(198): error C2662: 'Bag<TYPE>::empty' : cannot convert 'this' pointer from 'Bag' to 'Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(210): error C2662: 'Bag<TYPE>::getCount' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(217): error C2662: 'Bag<TYPE>::findItem' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(229): error C2662: 'Bag<TYPE>::toVector' : cannot convert 'this' pointer from 'Bag' to 'const Bag<TYPE> &'
-                 Reason: cannot convert from 'Bag' to 'const Bag<TYPE>'
-                 Conversion requires a second user-defined-conversion operator or constructor
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\driver.cpp(241): warning C4129: '|' : unrecognized character escape sequence
          Generating Code...
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\trip.cpp(24): error C4716: 'Trip::addClient' : must return a value
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\trip.cpp(46): error C4716: 'Trip::cancelTrip' : must return a value
-     1>c:\users\daniel\documents\github\csc-161\bag\bag\trip.cpp(52): error C4716: 'Trip::countClients' : must return a value
-         Compiling...
-         utiliity.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\daniel\Documents\GitHub\CSC-161\bag\bag\bag.vcxproj" (build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\bag.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.lib" /MACHINE:X86 Debug\driver.obj
+         Debug\menu.obj
+         Debug\trip.obj
+         Debug\utiliity.obj
+         LINK : C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.exe not found or not built by the last incremental link; performing full link
+         bag.vcxproj -> C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\daniel\Documents\GitHub\CSC-161\bag\Debug\bag.exe;#1" /manifest Debug\bag.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\bag.unsuccessfulbuild".
+         Touching "Debug\bag.lastbuildstate".
+     1>Done Building Project "C:\Users\daniel\Documents\GitHub\CSC-161\bag\bag\bag.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:03.25
+Time Elapsed 00:00:01.75

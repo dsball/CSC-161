@@ -27,7 +27,7 @@ fileToString(ifstream &inFile)  void      stores an ifstream in a string and ret
 #include<iomanip>
 #include<fstream>
 #include<vector>
-#include <windows.h>
+#include<windows.h>
 
 using std::cout;
 using std::cin;
@@ -36,6 +36,9 @@ using std::ifstream;
 using std::string;
 using std::vector;
 using std::setw;
+using std::to_string;
+using std::string;
+using std::left;
 
 void pause();
 bool printFile(string);

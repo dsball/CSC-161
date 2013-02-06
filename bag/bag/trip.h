@@ -1,3 +1,6 @@
+#ifndef _TRIP_INTERFACE_
+#define _TRIP_INTERFACE_
+
 #include "utility.h"
 #include "bag.h"
 
@@ -6,7 +9,7 @@ struct client
 	string firstName;
 	string lastName;
 	int age;
-	int phone;
+	string phone;
 	int experience;
 };
 
@@ -24,9 +27,11 @@ private:
 	string findString;
 public:
 	Trip();
-	bool addClient();
-	bool remClient();
-	bool cancelTrip();
-	int countClients();
+	void addClient();
+	void remClient();
+	void cancelTrip();
+	void countClients() const;
 	void listClients();
 };
+
+#endif

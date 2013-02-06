@@ -21,6 +21,7 @@ int main()
 	int intToAdd;
 	string stringToAdd;
 
+	Trip trip;
 
 	Bag<int> IntBag;
 	vector<int> intBagList;
@@ -44,6 +45,7 @@ int main()
 
 	menuA.addItem("Manage integer bag");
 	menuA.addItem("Manage string bag");
+	menuA.addItem("Manage trip bag");
 	menuA.addItem("exit");
 
 	menuB.addItem("Add item to Bag");
@@ -144,7 +146,7 @@ int main()
 								}
 								else
 								{
-									cout<<"  \|  item "<<i+1<<": "<<setw(10)<<intBagList[i]<<endl;
+									cout<<"  |  item "<<i+1<<": "<<setw(10)<<intBagList[i]<<endl;
 								}
 							
 							}
@@ -238,7 +240,7 @@ int main()
 								}
 								else
 								{
-									cout<<"  \|  item "<<i+1<<": "<<setw(10)<<stringBagList[i]<<endl;
+									cout<<"  |  item "<<i+1<<": "<<setw(10)<<stringBagList[i]<<endl;
 								}
 							
 							}
@@ -258,19 +260,24 @@ int main()
 			case 3:
 				while(choice != 6)
 				{
-					choice = menuB.getChoice();
+					choice = menuC.getChoice();
 					switch(choice)
 					{
 						case 1:
-							
+							trip.addClient();
+							break;
 						case 2:
-							
+							trip.remClient();
+							break;
 						case 3:
-							
+							trip.cancelTrip();
+							break;
 						case 4:
-							
+							trip.countClients();
+							break;
 						case 5:
-							
+							trip.listClients();
+							break;
 						case 6:
 							cout<<"\n\t\tReturning to main menu.\n";
 							break;
