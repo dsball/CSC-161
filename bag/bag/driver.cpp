@@ -1,10 +1,12 @@
 /*-------------------------------------driver.cpp
 Daniel Ball
 CSC 161 Lab 1
-Build a template Bag array clas which will store 15 items of the same data type. The user will be able to add, remove, empty,
+Build a template Bag array class which will store 15 items of the same data type. The user will be able to add, remove, empty,
 check item count, find an item, and list bag contents.
 
 The driver will consist of a menu and submenus which allow the user to perform bag functions on an integer bag and a string bag.
+
+
 */
 
 #include "menu.h"
@@ -43,13 +45,13 @@ int main()
 	pause();
 
 
-	menuA.addItem("Manage integer bag");
-	menuA.addItem("Manage string bag");
-	menuA.addItem("Manage trip bag");
+	menuA.addItem("Test integer Array");
+	menuA.addItem("Test string Array");
+	menuA.addItem("Test trip array");
 	menuA.addItem("exit");
 
-	menuB.addItem("Add item to Bag");
-	menuB.addItem("Remove item from bag");
+	menuB.addItem("Add item to the bag");
+	menuB.addItem("Remove item from the bag");
 	menuB.addItem("Empty the bag");
 	menuB.addItem("Number of items in bag");
 	menuB.addItem("Find an item in the bag");
@@ -91,14 +93,22 @@ int main()
 							else
 							{
 								cout<<"Add failed.";
-								Sleep(1000);
+								pause();
 							}
 							break;
 
 						case 2:
 							cout<<"\n\n\t\tEnter the item number you wish to remove: ";
 							cin>>deleteMe;
-							IntBag.deleteItem(deleteMe-1);
+							if(!(IntBag.deleteItem(deleteMe-1)))
+							{
+								cout<<"Delete failed! Did you enter a valid number?\n";
+							}
+							else
+							{
+								cout<<"Delete Successful";
+							}
+							pause();
 							break;
 
 						case 3:
@@ -122,7 +132,7 @@ int main()
 						case 5:
 							cout<<"\t\tEnter the number you wish to find:";
 							cin>>findInt;
-							index = IntBag.findItem(findInt);
+							index = IntBag.findItem(findInt, 0);
 							if(index != -1)
 							{
 								cout<<findInt<<" is item number: "<<index+1<<endl;
@@ -192,7 +202,14 @@ int main()
 						case 2:
 							cout<<"\n\n\t\tEnter the item number you wish to remove: ";
 							cin>>deleteMe;
-							StringBag.deleteItem(deleteMe-1);
+							if(!(StringBag.deleteItem(deleteMe-1)))
+							{
+								cout<<"Delete failed! Did you enter a valid number?\n";
+							}
+							else
+							{
+								cout<<"Delete Successful";
+							}
 							break;
 
 						case 3:
@@ -216,7 +233,7 @@ int main()
 						case 5:
 							cout<<"\t\tEnter the item you wish to find:";
 							cin>>findString;
-							index = StringBag.findItem(findString);
+							index = StringBag.findItem(findString, 0);
 							if(index != -1)
 							{
 								cout<<findString<<" is item number: "<<index+1<<endl;

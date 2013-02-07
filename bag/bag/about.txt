@@ -1,16 +1,18 @@
 --------------------------------------------------------------------
-|                   ,-.                 ,    ,-.                   |
-|                   |  )               '|   /  /\                  | 
-|                   |-<  ,-: ,-:   . ,  |   | / |                  |
-|                   |  ) | | | |   |/   |   \/  /                  |
-|                   `-'  `-` `-|   '    ' o  `-'                   |
-|                            `-'                                   |
 |                                                                  |
-|     By Daniel Ball:            daniel.s.ball@gmail.com           |
+|       \`\/\/\/`/        ,-.                 ,    ,-.             |
+|        )======(         |  )               '|   /  /\            |
+|      .'        '.       |-<  ,-: ,-:   . ,  |   | / |            |
+|     /            \      |  ) | | | |   |/   |   \/  /            |
+|    /              \     `-'  `-` `-|   '    ' o  `-'             |
+|   |                |             `-'                             |
+|   '.              .'    By Daniel Ball:                          |
+|     '------------'        daniel.s.ball@gmail.com                |
+|                             CSC-161, Spring 2013                 |
 |                                                                  |
-|     CSC-161, Spring 2013                                         |
 --------------------------------------------------------------------
-|  Creates two bags which store either integers or strings         |
-|  User is able to add, remove, list, search, count                |
-|  and empty each bag.                                             |
-|__________________________________________________________________|		
+|  Creates three bags which store integers, strings, and a         |
+|  trip class. Provides a user menu which provides functionality   |
+|  for manipulating the contents of each container.                |
+|                                                                  |
+--------------------------------------------------------------------

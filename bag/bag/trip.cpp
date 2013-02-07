@@ -1,10 +1,14 @@
 #include "trip.h"
 
+
+//default constructor
 Trip::Trip()
 {
 	
 }
 
+//prompts user for client information, validates data and enters into the Array. 
+//Also truncates names longer than 12 characters.
 void Trip::addClient()
 {
 	string tempInt;
@@ -17,15 +21,18 @@ void Trip::addClient()
 		cin.clear();
 		cin.sync();
 	}
+	if(tempClient.firstName.length() > 12)
+		tempClient.firstName.erase(12,string::npos);
 
 	cout<<"\n\tLast name:";
-
 	while(!(cin>>tempClient.lastName))
 	{
 		cout<<"That isn't a valid name.";
 		cin.clear();
 		cin.sync();
 	}
+	if(tempClient.lastName.length() > 12)
+		tempClient.lastName.erase(12,string::npos);
 
 	cout<<"\n\tAge:";
 	while(true)
@@ -82,13 +89,23 @@ void Trip::addClient()
 	clientBag.addItem(tempClient);
 }
 
+//removes a client from the array
 void Trip::remClient()
 {
 	cout<<"\n\n\t\tEnter the client number you wish to remove: ";
 	cin>>deleteMe;
-	clientBag.deleteItem(deleteMe-1);
+	if(!(clientBag.deleteItem(deleteMe-1)))
+	{
+		cout<<"Delete failed! Did you enter a valid number?";
+	}
+	else
+	{
+		cout<<"Delete Successful";
+	}
 }
 
+
+//cancels the trip by setting clients to zero
 void Trip::cancelTrip()
 {
 	cout<<"\n\t\tDumping bag contents...";
@@ -103,12 +120,14 @@ void Trip::cancelTrip()
 	pause();
 }
 
+//gets number of clients on the trip and prints it to screen
 void Trip::countClients() const
 {
-	cout<<"\n\n\t\tThere are "<<clientBag.getCount()<<" clients scheduled for the trip.";
-	Sleep(1000);
+	cout<<"\nThere are "<<clientBag.getCount()<<" clients scheduled for the trip.";
+	pause();
 }
 
+//lists the clients and their information
 void Trip::listClients()
 {
 	clientList = clientBag.toVector();

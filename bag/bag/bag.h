@@ -50,7 +50,7 @@ public:
 	Bag();
 	bool addItem(const TYPE& newEntry);
 	int getCount() const;
-	int findItem(TYPE itemToFind) const;
+	int findItem(TYPE itemToFind, int i) const;
 	bool deleteItem(int itemNum);
 	bool empty();
 	vector<TYPE> toVector() const;
@@ -80,8 +80,15 @@ bool Bag<TYPE>::addItem(const TYPE& newEntry)
 template<class TYPE>
 bool Bag<TYPE>::deleteItem(int itemNum)
 {
-	itemArray[itemNum] = itemArray[itemCount-1];
-	itemCount--;
+	if(itemNum > itemCount || itemNum < 0)
+	{
+		return false;
+	}
+	else
+	{
+		itemArray[itemNum] = itemArray[itemCount-1];
+		itemCount--;
+	}
 	return true;
 }
 
@@ -94,17 +101,22 @@ bool Bag<TYPE>::empty()
 }
 
 //checks through array to find index matching parameter value
+//Also, it's recursive
 template<class TYPE>
-int Bag<TYPE>::findItem(TYPE itemToFind) const
+int Bag<TYPE>::findItem(TYPE itemToFind, int i) const
 {
-	for(int i=0; i<itemCount;i++)
+	if(itemToFind == itemArray[i])
 	{
-		if(itemArray[i] == itemToFind)
-		{
-			return i;
-		}
+		return i;
 	}
-	return -1;
+	else if(i >= itemCount)
+	{
+		return -1;
+	}
+	else
+	{
+		return findItem(itemToFind, i+1);
+	}
 }
 
 //returns itemCount to client
