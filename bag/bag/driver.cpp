@@ -7,6 +7,8 @@ check item count, find an item, and list bag contents.
 The driver will consist of a menu and submenus which allow the user to perform bag functions on an integer bag and a string bag.
 
 
+
+
 */
 
 #include "menu.h"
@@ -125,8 +127,8 @@ int main()
 							break;
 
 						case 4:
-							cout<<"\n\n\t\tThere are "<<IntBag.getCount()<<" items in the bag.";
-							Sleep(1000);
+							cout<<"\n\n\t\tThere are "<<IntBag.getCount()<<" items in the bag.\n";
+							pause();
 							break;
 
 						case 5:
@@ -226,8 +228,8 @@ int main()
 							break;
 
 						case 4:
-							cout<<"\n\n\t\tThere are "<<StringBag.getCount()<<" items in the bag.";
-							Sleep(1000);
+							cout<<"\n\n\t\tThere are "<<StringBag.getCount()<<" items in the bag.\n";
+							pause();
 							break;
 
 						case 5:
@@ -270,6 +272,7 @@ int main()
 							break;
 						default:
 							cout<<"ERROR: undefined entry.";
+							Sleep(1000);
 							break;
 					}
 				}
@@ -300,9 +303,11 @@ int main()
 							break;
 						default:
 							cout<<"ERROR: undefined entry.";
+							Sleep(1000);
 							break;
 					}
 				}
+				break;
 			case 4:
 				if(!printFile("goodbye.txt"))
 				{
